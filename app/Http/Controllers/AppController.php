@@ -73,9 +73,9 @@ class AppController extends Controller
             $dataOrder->code = $data['code'];
             $dataOrder->save();
             $order_id = $dataOrder->id;
-            $dataOrderBlock = new OrdersBlock;
             foreach($blocks as $block_id)
             {
+                $dataOrderBlock = new OrdersBlock;
                 $dataOrderBlock->block_id = $block_id;
                 $dataOrderBlock->order_id = $order_id;
                 $dataOrderBlock->save();
